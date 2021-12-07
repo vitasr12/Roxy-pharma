@@ -129,13 +129,12 @@ require_once 'header.php';
             <div class="block-38 text-center">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_1.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Vita Sariani </h3>
-                  <p class="block-38-subheading">CEO/Co-Founder</p>
+                  <img src="images/vita.jpeg" alt="Image placeholder" class="mb-4">
+                  <h3 class="block-38-heading h4">Vita Sariani Br Sembiring</h3>
+                  <p class="block-38-subheading">211402073</p>
                 </div>
                 <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
+                  <p>Membuat dashboard admin dan menghubungkan ke database</p>
                 </div>
               </div>
             </div>
@@ -144,13 +143,26 @@ require_once 'header.php';
             <div class="block-38 text-center">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_2.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Jennifer Greive</h3>
-                  <p class="block-38-subheading">Co-Founder</p>
+                  <img src="images/trifine.jpg" alt="Image placeholder" class="mb-4">
+                  <h3 class="block-38-heading h4">Trifine Laurensi Br Ginting</h3>
+                  <p class="block-38-subheading">211402142</p>
                 </div>
                 <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
+                  <p>Membuat codingan tentang transaksi & dihubungkan ke database update & delete</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-12 col-lg-12 mb-5">
+            <div class="block-38 text-center">
+              <div class="block-38-img">
+                <div class="block-38-header">
+                  <img src="images/erick.jpeg" alt="Image placeholder" class="mb-4">
+                  <h3 class="block-38-heading h4">Erick Lorus</h3>
+                  <p class="block-38-subheading">211402070</p>
+                </div>
+                <div class="block-38-body">
+                  <p>Membuat kategori,unit, & items di bagian product & membuat ppt.</p>
                 </div>
               </div>
             </div>
@@ -159,13 +171,12 @@ require_once 'header.php';
             <div class="block-38 text-center">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_3.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Patrick Marx</h3>
-                  <p class="block-38-subheading">Marketing</p>
+                  <img src="images/rydle.jpeg" alt="Image placeholder" class="mb-4">
+                  <h3 class="block-38-heading h4">Rydle Sianturi</h3>
+                  <p class="block-38-subheading">211402079</p>
                 </div>
                 <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
+                  <p>Validasi form untuk login & registrasi & membuat Mindmap</p>
                 </div>
               </div>
             </div>
@@ -174,13 +185,12 @@ require_once 'header.php';
             <div class="block-38 text-center">
               <div class="block-38-img">
                 <div class="block-38-header">
-                  <img src="images/person_4.jpg" alt="Image placeholder" class="mb-4">
-                  <h3 class="block-38-heading h4">Mike Coolbert</h3>
-                  <p class="block-38-subheading">Sales Manager</p>
+                  <img src="images/fadhlul.jpeg" alt="Image placeholder" class="mb-4">
+                  <h3 class="block-38-heading h4">Fadhlul Dzaki Handoko</h3>
+                  <p class="block-38-subheading">211402016</p>
                 </div>
                 <div class="block-38-body">
-                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae aut minima nihil sit distinctio
-                    recusandae doloribus ut fugit officia voluptate soluta. </p>
+                  <p>Membuat update dan delete serta datatable dari supplier</p>
                 </div>
               </div>
             </div>
