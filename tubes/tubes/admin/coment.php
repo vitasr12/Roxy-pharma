@@ -65,10 +65,23 @@ include "layout/header.php";
                 </div>
             </div>
 
+              </div>
+              <?php
+              endwhile;
+              ?>
         </div>
-        <?php
-        endwhile;
-        ?>
+        </div>
+        <!-- /.card-body -->
+ 
+        <!-- /.card-footer-->
+        </div>
+      <!-- /.card -->
+
+    </section>
+    <!-- /.content -->
+  </div>
+  <!-- /.content-wrapper -->
+
 <script>
 
 var elems = document.getElementsByClassName('confirmation');
@@ -87,3 +100,7 @@ var elems = document.getElementsByClassName('confirmation');
 
 
 </script>
+
+<?php
+include "layout/footer.php";
+?>

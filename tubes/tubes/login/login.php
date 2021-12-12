@@ -1,23 +1,3 @@
-<?php 
-if (isset($_SESSION['level'])) {
-    if ($_SESSION['level'] == 'admin') {
-        header("Location: ../admin/index.php");
-    }else if ($_SESSION['level'] == 'user'){
-        header("Location: dashboard.php");
-    }
-}
-?>
-
-<div class="container" style="height: 91vh;">
-<?php if (isset($_SESSION['sukses'])) { ?>
-<div class="alert alert-primary" role="alert">
-  <?=$_SESSION['sukses']; ?>
-</div>
-<?php }else if(isset($_SESSION['gagal'])){ ?>
-<div class="alert alert-danger" role="alert">
-  <?=$_SESSION['gagal']; ?>
-</div>
-<?php } ?>
 
 <!DOCTYPE html>
 <html lang="en" class="h-100">
@@ -45,8 +25,8 @@ if (isset($_SESSION['level'])) {
                                     <h4 class="text-center mb-4">Sign in your account</h4>
                                     <form method="POST" action="user.php?action=masuk">
                                         <div class="form-group">
-                                            <label for="Email" class="mb-1"><strong>Email</strong></label>
-                                            <input name="Email" id="Email" type="email" class="form-control" placeholder="hello@example.com">
+                                            <label for="username" class="mb-1"><strong>Usernamae</strong></label>
+                                            <input name="username" id="username" type="text" class="form-control" placeholder="username">
                                         </div>
                                         <div class="form-group">
                                             <label for="password" class="mb-1"><strong>Password</strong></label>
@@ -64,11 +44,11 @@ if (isset($_SESSION['level'])) {
                                             </div>
                                         </div>
                                         <div class="text-center">
-                                            <a href="../admin/index.php" type="submit" class="btn btn-primary btn-block text-cemter" name="btnlogin">Sign Me In</a>
+                                            <a href="../admin/index.php" type="submit" class="btn btn-primary btn-block text-cemter" name="btnlogin">Login</a>
                                         </div>
                                     </form>
                                     <div class="new-account mt-3">
-                                        <p>Don't have an account? <a class="text-primary" href="./page-register.html">Sign up</a></p>
+                                        <p>Don't have an account? <a class="text-primary" href="register.php">Sign up</a></p>
                                     </div>
                                 </div>
                             </div>
@@ -78,6 +58,36 @@ if (isset($_SESSION['level'])) {
             </div>
         </div>
     </div>
+
+
+	<?php
+
+	if(isset($_POST['btnlogin']))
+	{
+		require ("../include/koneksi.php");
+		$user_login = $_POST['username'];
+		$pass_login = $_POST['password'];
+		$sql ="SELECT * FROM user WHERE username = '{$user_login}' and password = '{$pass_login}'";
+		$query = mysqli_query($conn, $sql);
+
+		while($row = mysqli_fetch_array($query)){
+    		$user = $row['username'];
+    		$pass = $row['password'];
+    		$nama = $row['nama'];
+    		$email = $row['email'];
+		}
+
+		if($user_login == $user && $pass_login == $pass){
+    		header("Location: ../admin/index.php");
+    		$_SESSION['username'] = $user;
+    		$_SESSION['nama'] = $nama;
+    		$_SESSION['email'] = $email;
+		} else { 
+    		echo "<h4>Username atau Password Tidak Ditemukan</h4>";
+		}
+	}
+
+	?>
 
     <!--**********************************
         Scripts
