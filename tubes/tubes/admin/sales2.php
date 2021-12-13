@@ -67,7 +67,7 @@ include "layout/header.php";
                 <table class="table table-stripped">
 										<tr>
 											<td><h4><i class="fa fa-shopping-cart"></i> KASIR</td>
-											<td align="right"><a class="btn btn-danger pull-right" href="fungsi/hapus/hapus.php?penjualan=jual">
+											<td align="right"><a class="btn btn-danger pull-right" href="hapus/hapus.php?transaksi=sales">
 										<b>RESET KERANJANG</b></a></h4></td>
 										</tr>
 									</table>
