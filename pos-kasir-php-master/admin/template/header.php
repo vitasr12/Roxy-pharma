@@ -7,10 +7,12 @@
     <meta name="author" content="Dashboard">
     <meta name="keyword" content="Dashboard, Bootstrap, Admin, Template, Theme, Responsive, Fluid, Retina">
 
-    <title>Sistem Penjualan Barang Berbasis Web </title>
+    <title>Apotek | Roxy Pharma </title>
 
     <!-- Bootstrap core CSS -->
     <link href="assets/css/bootstrap.css" rel="stylesheet">
+      <!-- Font Awesome -->
+    <link rel="stylesheet" href="./plugins/fontawesome-free/css/all.min.css">
     <!--external css-->
     <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
     <link rel="stylesheet" type="text/css" href="assets/css/zabuto_calendar.css">
@@ -26,6 +28,10 @@
         <script type="text/javascript" src="assets/datatables/jquery.dataTables.js"></script>
         <script type="text/javascript" src="assets/datatables/dataTables.bootstrap.js"></script>
         <script type="text/javascript" src="assets/js/jquery-2.2.3.min.js"></script>
+
+          <!-- Tiny -->
+  <script src="assets/tinymce/js/tinymce/tinymce.min.js"></script>
+  
     <style>
 		.header{background:#328f6b; color:#fff;}
 		#main-content{ background:#fff;}
@@ -39,9 +45,9 @@
   </head>
   <body>
 	<section id="container" >
-      <!-- **********************************************************************************************************************************************************
+      <!-- ****************************************************
       TOP BAR CONTENT & NOTIFICATIONS
-      *********************************************************************************************************************************************************** -->
+      ***************************************************** -->
       <!--header start-->
       <header class="header black-bg">
               <div class="sidebar-toggle-box">
