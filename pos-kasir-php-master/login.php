@@ -65,6 +65,8 @@
 		            <input type="password" class="form-control" name="pass" placeholder="Password">
 		            <br>
 		            <button class="btn btn-primary btn-block" name="proses" type="submit"><i class="fa fa-lock"></i> SIGN IN</button>
+					<br>
+					<p class="text-primary">Don't have an account? <a class="text-primary" href="register.php">Sign up</a></p>
 		        </div>
 		      </form>	  	
 	  	
