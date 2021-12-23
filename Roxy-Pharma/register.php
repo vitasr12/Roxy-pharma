@@ -1,11 +1,18 @@
-<?php
-if (isset($_SESSION['level'])) {
-    if ($_SESSION['level'] == 'admin') {
-        header("Location: ../admin/index.php");
-    }else if ($_SESSION['level'] == 'user'){
-        header("Location: index.php");
+<?php 
+include_once('user.php');
+$database = new database();
+if(isset($_POST['register']))
+{
+    $username = $_POST['user'];
+    $password = md5($_POST['pass']);
+    $nama = $_POST['nama'];
+    $email =$_POST['email'];
+    if($database->register($username,$nama,$email,$password))
+    {
+      header('location:login.php');
     }
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en" class="h-100">
@@ -54,27 +61,32 @@ if (isset($_SESSION['level'])) {
                             <div class="col-xl-12">
                                 <div class="auth-form"style="margin: 80px 350px;width: 400px;padding: 10px;border: 1px solid #ccc;background: #004643; border-radius:10px;">
                                     <h4 class="text-center mb-4" style="margin: 0;padding: 25px 20px;text-align: center;background: #42929e;border-radius: 5px 5px 0 0;-webkit-border-radius: 5px 5px 0 0;color: #fff;">Sign up your account</h4>
-                                    <form style="background: #fff;color:#000000" class="login-wrap" id="form" method="POST" action="user.php?aksi=register" enctype="multipart/form-data" >
+                                    <form style="background: #fff;color:#000000" class="login-wrap" id="form" method="POST" enctype="multipart/form-data" >
                                             <div class="form-group">
                                                 <label class="mb-1" for="nama">Name</label>
-                                                <input class="form-control" type="text" id="nama" name="nama" required />
+                                                <input class="form-control" type="text" id="nama" name="nama" required oninvalid="this.setCustomValidity('Silahkan Isi Nama Anda')" oninput="setCustomValidity('')">
+                                                <div id="validasi-nama"></div>
+                                            </div>
+                                            <div class="form-group">
+                                                <label class="mb-1" for="user">Username</label>
+                                                <input class="form-control" type="text" id="user" name="user" required oninvalid="this.setCustomValidity('Silahkan Isi Username Anda')" oninput="setCustomValidity('')">
                                                 <div id="validasi-nama"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="mb-1"  for="email">Email Address</label>
-                                                <input class="form-control" type="email" id="email" name="email" required />
+                                                <input class="form-control" type="email" id="email" name="email" required oninvalid="this.setCustomValidity('Silahkan Isi Email Anda')" oninput="setCustomValidity('')">
                                                 <div id="validasi-email"></div>
                                             </div>
                                             <div class="form-group">
                                                 <label class="mb-1"  for="password">Password</label>
-                                                <input class="form-control" type="password" id="pass" name="pass" required />
+                                                <input class="form-control" type="password" id="pass" name="pass" required oninvalid="this.setCustomValidity('Masukkan Password')" oninput="setCustomValidity('')">
                                                 <div id="validasi-password"></div>
                                             </div>
                                             <div class="form-group">
-                                                <button type="submit" class="btn btn-primary btn-block">Register</button>
+                                                <button type="submit" class="btn btn-primary btn-block" name="register">Register</button>
                                             </div>
                                             <div class="new-account mt-3">
-                                        <p>Already have an account? <a class="text-primary" href="login.php">Sign in</a></p>
+                                            <p>Already have an account? <a class="text-primary" href="login.php">Sign in</a></p>
                                             </div>
                                         </form>
                                 </div>
@@ -94,40 +106,5 @@ if (isset($_SESSION['level'])) {
 <script src="./vendor/bootstrap-select/dist/js/bootstrap-select.min.js"></script>
 <script src="./js/custom.min.js"></script>
 <script src="./js/deznav-init.js"></script>
-<script>
-
-    $(document).ready(function(){
-    $('#email').blur(function(){
-        var email = $(this).val();
-        $.ajax({
-            type    : 'POST',
-            url     : 'user.php?aksi=validasi',
-            data    : 'email='+email,
-            success : function(data){
-                $('#validasi-email').html(data);
-            }
-        })
-    });
-
-    $('#form').submit(function(){
-       
-        if ($('#nama').val().length  < 8) {
-        $('#validasi-nama').html('<p class="text-danger">Silahkan isi nama anda min. 8 karakter </p>');
-        return false;
-       } 
-
-       if ($('#email').val().length  == 0) {
-        $('#validasi-email').html('<p class="text-danger">Silahkan isi email anda </p>');
-        return false;
-       } 
-
-       if ($('#pass').val().length  < 8) {
-        $('#validasi-password').html('<p class="text-danger">Silahkan isi password anda min. 8 karakter </p>');
-        return false;
-       } 
-    });
-});
-
-</script>
 </body>
 </html>

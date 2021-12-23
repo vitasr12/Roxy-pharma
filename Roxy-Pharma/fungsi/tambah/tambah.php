@@ -53,7 +53,7 @@ if(!empty($_SESSION['admin'])){
 			    VALUES (?,?,?,?,?) ';
 		$row = $config -> prepare($sql);
 		$row -> execute($data);
-		echo '<script>window.location="../../index.php?page=coment&success=tambah-data"</script>';
+		echo '<script>window.location="../../index.php?page=review&success=tambah-data"</script>';
 	}
 	if(!empty($_GET['jual'])){
 		$id = $_GET['id'];
