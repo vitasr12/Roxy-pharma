@@ -16,7 +16,7 @@
 				$hasil = $row -> fetchAll();
 				return $hasil;
 			}
-
+			
 			function member_edit($id){
 				$sql = "SELECT member.*, login.*
 						from member inner join login on member.id_member = login.id_member
@@ -102,6 +102,13 @@
 					$format = 'BRG'.$no.'';
 				}
 				return $format;
+			}
+
+			function review(){
+				$sql = "SELECT * FROM review ORDER BY id DESC";
+				$row = $this-> db -> prepare($sql);
+				$row -> execute();
+				$hasil = $row -> fetch();
 			}
 
 			function kategori_edit($id){

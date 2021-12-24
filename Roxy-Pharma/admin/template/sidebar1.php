@@ -1,10 +1,9 @@
-   
-      <!-- **********************************************************************************************************************************************************
+<!-- ****************************************************
       MAIN SIDEBAR MENU
-      *********************************************************************************************************************************************************** -->
+      ***************************************************** -->
       <!--sidebar start-->
       <?php 
-  $id = $_SESSION['id_member'];
+  $id = $_SESSION['admin']['id_member'];
   $hasil_profil = $lihat -> member_edit($id);
 ?>
       <aside>
@@ -22,13 +21,13 @@
                       </a>
                   </li>
                   <li class="sub-menu">
-                      <a href="javascript:;" >
-                          <i class="fa fa-desktop"></i>
-                          <span>Master <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
+                      <a href="index.php?page=beli" >
+                        <i class="fa fa-flask"></i>
+                          <span>Barang <span style="padding-left:2px;"></span></span>
                       </a>
-                      <ul class="sub">
-                          <li><a  href="index.php?page=barang">Barang</a></li>
-                      </ul>
+                      <!-- <ul class="sub">
+                          <li><a  href=>Barang</a></li>
+                      </ul> -->
                   </li>
                   <li class="sub-menu">
                       <a href="javascript:;" >
@@ -37,7 +36,6 @@
                       </a>
                       <ul class="sub">
                           <li><a  href="index.php?page=jual">Transaksi Jual</a></li>
-                          <li><a  href="index.php?page=laporan">Laporan Penjualan</a></li>
                       </ul>
                   </li>
                   <li class="">
@@ -51,4 +49,3 @@
           </div>
       </aside>
       <!--sidebar end-->
-      

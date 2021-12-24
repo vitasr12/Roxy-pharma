@@ -1,14 +1,6 @@
 <?php
-
-	
-if(!defined('__NOT_DIRECT')){
-  //mencegah akses langsung ke file ini
-  die('Akses langsung tidak diizinkan!');
-}
-
 date_default_timezone_set("Asia/Jakarta");
 error_reporting(0);
-
 	// sesuaikan dengan server anda
 	$host 	= 'localhost'; // host server
 	$user 	= 'root';  // username server
@@ -21,7 +13,11 @@ error_reporting(0);
 	}catch(PDOException $e){
 		echo 'KONEKSI GAGAL' .$e -> getMessage();
 	}
+
+ 
 	
 	$view = 'fungsi/view/view.php'; // direktori fungsi select data
+
+
 ?>
 

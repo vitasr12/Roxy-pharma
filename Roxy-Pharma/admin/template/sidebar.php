@@ -7,7 +7,7 @@
   $hasil_profil = $lihat -> member_edit($id);
 ?>
       <aside>
-          <div id="sidebar"  class="nav-collapse ">
+          <div id="sidebar"  class="nav-collapse " style="background: #39A388;">
               <!-- sidebar menu start-->
               <ul class="sidebar-menu" id="nav-accordion">
               
@@ -43,7 +43,7 @@
                           <i class="fa fa-desktop"></i>
                           <span>Transaksi <span style="padding-left:2px;"> <i class="fa fa-angle-down"></i></span></span>
                       </a>
-                      <ul class="sub">
+                      <ul class="sub" >
                           <li><a  href="index.php?page=jual">Transaksi Jual</a></li>
                           <li><a  href="index.php?page=laporan">Laporan Penjualan</a></li>
                       </ul>

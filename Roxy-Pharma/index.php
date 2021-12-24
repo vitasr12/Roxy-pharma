@@ -9,22 +9,30 @@
 		include $view;
 		$lihat = new view($config);
 		$toko = $lihat -> toko();
+
 		//  admin
+		if(!empty($_SESSION['admin']['id_member'] <= 5)){
 			include 'admin/template/header.php';
-			if($_SESSION['level']=='user'){
-				include 'admin/template/sidebar1.php';
+			include 'admin/template/sidebar.php';
+			if(!empty($_GET['page'])){
+				include 'admin/module/'.$_GET['page'].'/index.php';
 			}else{
-				include 'admin/template/sidebar.php';
+				include 'admin/template/home.php';
 			}
-				if(!empty($_GET['page'])){
-					include 'admin/module/'.$_GET['page'].'/index.php';
-				}else{
-					include 'admin/template/home.php';
-				}
+		}else {
+			include 'admin/template/header.php';
+			include 'admin/template/sidebar1.php';
+			if(!empty($_GET['page'])){
+				include 'admin/module/'.$_GET['page'].'/index.php';
+			}else{
+				include 'admin/template/home1.php';
+			}
+		}
+			
+		
 			include 'admin/template/footer.php';
 		// end admin
 	}else{
 		echo '<script>window.location="login.php";</script>';
 	}
 ?>
-
