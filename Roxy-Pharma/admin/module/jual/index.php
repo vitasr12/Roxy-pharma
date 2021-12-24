@@ -71,7 +71,6 @@
 													<td> Nama Barang</td>
 													<td style="width:10%;"> Jumlah</td>
 													<td style="width:20%;"> Total</td>
-													<td> Kasir</td>
 													<td> Aksi</td>
 												</tr>
 											</thead>
@@ -89,7 +88,6 @@
 														<input type="hidden" name="id_barang" value="<?php echo $isi['id_barang'];?>" class="form-control">
 													</td>
 													<td>Rp.<?php echo number_format($isi['total']);?>,-</td>
-													<td><?php echo $isi['nm_member'];?></td>
 													<td>
 														<button type="submit" class="btn btn-warning">Update</button>
 												</form>

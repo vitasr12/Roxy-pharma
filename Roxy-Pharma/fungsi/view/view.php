@@ -105,7 +105,7 @@
 			}
 
 			function review(){
-				$sql = "SELECT * FROM review ORDER BY id DESC";
+				$sql = "SELECT * FROM review WHERE id=?";
 				$row = $this-> db -> prepare($sql);
 				$row -> execute();
 				$hasil = $row -> fetch();

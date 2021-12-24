@@ -37,19 +37,27 @@ if(!empty($_SESSION['admin'])){
 		echo '<script>window.location="../../index.php?page=barang&success=tambah-data"</script>';
 	}
 	if(!empty($_GET['review'])){
-		$id = $_POST['id'];
+		$id = $_GET['id'];
+		
+		// get tabel barang id_barang 
+		$sql = 'SELECT * FROM review WHERE id_barang = ?';
+		$row = $config->prepare($sql);
+		$row->execute(array($id));
+		$hsl = $row->fetch();
+
 		$nama = $_POST['nama'];
-		$product = $_POST['nm_product'];
+		$kategori = $_POST['kategori']
+		$pdt = $_POST['nm_product'];
 		$email = $_POST['email'];
 		$ket = $_POST['keterangan'];
 		
-		$data[] = $id;
 		$data[] = $nama;
+		$data[] = $kategori;
 		$data[] = $product;
 		$data[] = $email;
 		$data[] = $ket;
 
-		$sql = 'INSERT INTO review (id,nama,nm_prodct,email,ket) 
+		$sql = 'INSERT INTO review (nama,kategori,nm_prodct,email,ket) 
 			    VALUES (?,?,?,?,?) ';
 		$row = $config -> prepare($sql);
 		$row -> execute($data);
