@@ -28,7 +28,8 @@
                 <div class="card-body ">
                     <h5 class="card-title">Panadol</h5>
                     <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur consequatur dolores architecto quia? Ratione, fuga ea reiciendis maxime dolores totam provident iste optio quae voluptatum a dolorum voluptatibus dicta cum.</p>
-                    <div class="w-100 mb-2">
+                    <div class="w-100 mt-2">
+                        <br>
                     </div>
                     <a onclick="confirm('Apakah anda yakin ingin menghapus record ini ?')" href="#" class="btn btn-danger text-white float-right mx-1" data-toggle="tooltip" data-placement="bottom" title="Hapus">
                         <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
@@ -96,7 +97,9 @@
 						
 					</div>
               	</div>
-                <script>
+        
+
+<script>
     (function() {
         'use strict';
         window.addEventListener('load', function() {

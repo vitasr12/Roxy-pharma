@@ -8,7 +8,7 @@
 
     require 'config.php';
     include $view;
-     = new view($config);
+    new view($config);
 
     $bulan_tes =array(
         '01'=>"Januari",
@@ -66,15 +66,15 @@
                         $no=1; 
                         $jumlah = 0;
                         $bayar = 0;
-                        $hasil =  -> periode_jual($periode);
+                        $hasil -> periode_jual($periode);
                     }elseif(!empty($_GET['hari'])){
                         $hari = $_GET['tgl'];
                         $no=1; 
                         $jumlah = 0;
                         $bayar = 0;
-                        $hasil =  -> hari_jual($hari);
+                        $hasil -> hari_jual($hari);
                     }else{
-                        $hasil =  -> jual();
+                        $hasil -> jual();
                     }
                 ?>
                 <?php 
