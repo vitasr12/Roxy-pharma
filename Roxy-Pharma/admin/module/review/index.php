@@ -63,17 +63,6 @@
 												$format = $lihat -> barang_id();
 											?>
 											<tr>
-												<td>Kategori</td>
-												<td>
-												<select name="kategori" class="form-control" required>
-													<option value="#">Pilih Kategori</option>
-													<?php  $kat = $lihat -> kategori(); foreach($kat as $isi){ 	?>
-													<option value="<?php echo $isi['id_kategori'];?>"><?php echo $isi['nama_kategori'];?></option>
-													<?php }?>
-												</select>
-												</td>
-											</tr>
-											<tr>
 												<td>Nama</td>
 												<td><input type="text" placeholder="Nama Anda" required class="form-control" name="nama"></td>
 											</tr>

@@ -43,14 +43,6 @@
 				return $hasil;
 			}
 
-			function review(){
-				$sql = "select*from review";
-				$row = $this-> db -> prepare($sql);
-				$row -> execute();
-				$hasil = $row -> fetchAll();
-				return $hasil;
-			}
-
 			function barang(){
 				$sql = "select barang.*, kategori.id_kategori, kategori.nama_kategori
 						from barang inner join kategori on barang.id_kategori = kategori.id_kategori 
